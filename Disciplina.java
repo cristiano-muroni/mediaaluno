@@ -1,84 +1,53 @@
 package mediaaluno;
-
+/* essa classe servirá para todos os objetos e instancias de notas e matérias */
 public class Disciplina {
 	
-	private double nota1;
-	private String disciplina1;
-	private double nota2;
-	private String disciplina2;
-	private double nota3;
-	private String disciplina3;
-	private double nota4;
-	private String disciplina4;
-	public double getNota1() {
-		return nota1;
+	private double nota;
+	private String disciplina;
+	public double getNota() {
+		return nota;
 	}
-	public void setNota1(double nota1) {
-		this.nota1 = nota1;
+	public void setNota(double nota) {
+		this.nota = nota;
 	}
-	public String getDisciplina1() {
-		return disciplina1;
+	public String getDisciplina() {
+		return disciplina;
 	}
-	public void setDisciplina1(String disciplina1) {
-		this.disciplina1 = disciplina1;
+	public void setDisciplina(String disciplina) {
+		this.disciplina = disciplina;
 	}
-	public double getNota2() {
-		return nota2;
-	}
-	public void setNota2(double nota2) {
-		this.nota2 = nota2;
-	}
-	public String getDisciplina2() {
-		return disciplina2;
-	}
-	public void setDisciplina2(String disciplina2) {
-		this.disciplina2 = disciplina2;
-	}
-	public double getNota3() {
-		return nota3;
-	}
-	public void setNota3(double nota3) {
-		this.nota3 = nota3;
-	}
-	public String getDisciplina3() {
-		return disciplina3;
-	}
-	public void setDisciplina3(String disciplina3) {
-		this.disciplina3 = disciplina3;
-	}
-	public double getNota4() {
-		return nota4;
-	}
-	public void setNota4(double nota4) {
-		this.nota4 = nota4;
-	}
-	public String getDisciplina4() {
-		return disciplina4;
-	}
-	public void setDisciplina4(String disciplina4) {
-		this.disciplina4 = disciplina4;
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((disciplina == null) ? 0 : disciplina.hashCode());
+		long temp;
+		temp = Double.doubleToLongBits(nota);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		return result;
 	}
 	
-public double mediaNota() {
-		
-		return  (nota1 + nota2 + nota3 + nota4) / 4;
-	}
-	
-	public boolean aprovação() {
-		double mediaAluno = this.mediaNota();
-		
-		if (mediaAluno > 7) {
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
 			return true;
-		} else {
+		if (obj == null)
 			return false;
-		}
+		if (getClass() != obj.getClass())
+			return false;
+		Disciplina other = (Disciplina) obj;
+		if (disciplina == null) {
+			if (other.disciplina != null)
+				return false;
+		} else if (!disciplina.equals(other.disciplina))
+			return false;
+		if (Double.doubleToLongBits(nota) != Double.doubleToLongBits(other.nota))
+			return false;
+		return true;
 	}
 	@Override
 	public String toString() {
-		return "Disciplina: " +  getDisciplina1() + ", Nota: " + getNota1() + "\nDisciplina:"
-				+ getDisciplina2() + ", Nota: " + getNota2() + " \nDisciplina: " + getDisciplina3()
-				+ ", Nota: " + getNota3() + "\nDisciplina: " + getDisciplina4() + ", Nota: "
-				+ getNota4();
+		return "Disciplina [nota=" + nota + ", disciplina=" + disciplina + "]";
 	}
 	
 	

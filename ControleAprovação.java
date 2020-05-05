@@ -9,47 +9,37 @@ public class ControleAprovação {
 
 
 	public static void main(String[] args) {
-		 
-		Aluno aluno = new Aluno();
-		Disciplina disciplina = new Disciplina();
+		
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
+		Aluno aluno1 = new Aluno();
+		
+		Disciplina disciplina1 = new Disciplina();		
+		disciplina1.setDisciplina("Banco de dados");
+		disciplina1.setNota(10);
+				
+		Disciplina disciplina2 = new Disciplina();
+		disciplina2.setDisciplina("Matemática Discreta");
+		disciplina2.setNota(8);
+				
+		Disciplina disciplina3 = new Disciplina();
+		disciplina3.setDisciplina("Estrutura de Dados");
+		disciplina3.setNota(5);
+						
+		Disciplina disciplina4 = new Disciplina();
+		disciplina4.setDisciplina("Orientação a Objetos");
+		disciplina4.setNota(9.5);
+		
+		aluno1.getDisciplinas().add(disciplina1);
+		aluno1.getDisciplinas().add(disciplina2);
+		aluno1.getDisciplinas().add(disciplina3);
+		aluno1.getDisciplinas().add(disciplina4);
+		
+		System.out.println(aluno1.getMediaNota());
 		
 		
-		aluno.setSemestre(JOptionPane.showInputDialog("diga o seu semestre"));		
-		System.out.println("diga o nome do aluno");
-		aluno.setNome(sc.nextLine());
-		System.out.println("digite o RA");
-		aluno.setRa(Integer.parseInt(sc.nextLine()));
-		//System.out.println("digite o semestre");
-		//aluno.setSemestre(semestre);
-		//aluno.setSemestre(sc.nextLine());
-		System.out.println("digite a disciplina 1");
-		disciplina.setDisciplina1(sc.nextLine());
-		System.out.println("digite a nota 1");
-		disciplina.setNota1(Double.parseDouble(sc.nextLine()));
-		System.out.println("digite a disciplina 2");
-		disciplina.setDisciplina2(sc.nextLine());
-		System.out.println("digite a nota 2");
-		disciplina.setNota2(Double.parseDouble(sc.nextLine()));
-		System.out.println("digite a disciplina 3");
-		disciplina.setDisciplina3(sc.nextLine());
-		System.out.println("digite a nota 3");
-		disciplina.setNota3(Double.parseDouble(sc.nextLine()));
-		System.out.println("digite a disciplina 4");
-		disciplina.setDisciplina4(sc.nextLine());
-		System.out.println("digite a nota 4");
-		disciplina.setNota4(Double.parseDouble(sc.nextLine()));
-		
-		System.out.println("---------------- * -----------------");
-		System.out.println(aluno.toString());
-		System.out.println("---------------- * -----------------");
-		System.out.println(disciplina.toString());
-		System.out.println("---------------- * -----------------");
-		System.out.printf("A sua nota média é %.2f \n",disciplina.mediaNota());
-		System.out.println(aluno.getNome() + " você está " + (disciplina.aprovação()? "aprovado": " reprovado"));
-		System.out.println("---------------- * -----------------");
+	
 
 		
 		sc.close();
