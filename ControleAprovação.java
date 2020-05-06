@@ -1,5 +1,6 @@
 package mediaaluno;
-// controle da classe aluno
+// controle da classe Aluno e Disciplina
+
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -15,10 +16,10 @@ public class ControleAprovação {
 		
 		Aluno aluno = new Aluno();
 		
-		String semestre = JOptionPane.showInputDialog(" digite o semestre do aluno");// *aqui que esta dando problema
+		String semestre = JOptionPane.showInputDialog(" digite o semestre do aluno");
 		aluno.setSemestre(semestre);
 		System.out.println(" Digite o Ra do aluno");
-		aluno.setRa(Integer.parseInt(sc.nextLine())); // Integer.parseInt(sc.nextLine())
+		aluno.setRa(Integer.parseInt(sc.nextLine())); 
 		System.out.println(" Digite o nome do aluno");
 		aluno.setNome(sc.nextLine());
 		System.out.println(" Digite o nome do pai do aluno");
