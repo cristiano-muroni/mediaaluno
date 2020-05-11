@@ -11,7 +11,7 @@ public class Aluno {
 	private String nomeMae;
 	private String semestre;
 	private String dataNascimento;
-	private int numeroCpf;
+	private long numeroCpf;
 	private String nomeEscola;
 	private String Semestre;
 	
@@ -58,10 +58,10 @@ public class Aluno {
 	public void setDataNascimento(String dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
-	public int getNumeroCpf() {
+	public long getNumeroCpf() {
 		return numeroCpf;
 	}
-	public void setNumeroCpf(int numeroCpf) {
+	public void setNumeroCpf(long numeroCpf) {
 		this.numeroCpf = numeroCpf;
 	}
 	public String getNomeEscola() {

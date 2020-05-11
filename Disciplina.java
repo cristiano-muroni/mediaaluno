@@ -47,8 +47,9 @@ public class Disciplina {
 	}
 	@Override
 	public String toString() {
-		return "nota:" + nota + ", disciplina:" + disciplina;
+		return "disciplina:" + getDisciplina() + "nota:" + getNota();
 	}
+	
 	
 	
 }
