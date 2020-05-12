@@ -9,7 +9,6 @@ public class Aluno {
 	private String nome;
 	private String nomePai;
 	private String nomeMae;
-	private String semestre;
 	private String dataNascimento;
 	private long numeroCpf;
 	private String nomeEscola;
@@ -80,10 +79,11 @@ public class Aluno {
 		
 		double somaNotas = 0.0;
 		
+		
 		for (Disciplina disciplina : disciplinas) {
 			somaNotas += disciplina.getNota(); 
 		}
-		return somaNotas / disciplinas.size() ;	  	
+		return somaNotas / disciplinas.size();	  	
 	}
 	
 	public boolean getAprovacao() {

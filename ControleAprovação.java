@@ -15,8 +15,7 @@ public class ControleAprovação {
 		Scanner sc = new Scanner(System.in);
 		
 		Aluno aluno = new Aluno();
-		Disciplina disciplina = new Disciplina();
-				
+		
 		
 		//aluno.setSemestre(semestre);
 		System.out.println(" Digite o Ra do aluno");
@@ -37,11 +36,13 @@ public class ControleAprovação {
 		aluno.setSemestre(semestre);
 	
 		
-		
+		Disciplina disciplina = null;
 		
 		for (int i = 1; i < 4 ; i++) {
+			
 			String nomeDisciplina = JOptionPane.showInputDialog(" Digite o nome da disciplina"+ i + " ?");
 			String notaDisciplina = JOptionPane.showInputDialog(" Digite a nota da disciplina"+ i +" ?");
+			disciplina = new Disciplina();
 			disciplina.setDisciplina(nomeDisciplina);
 			disciplina.setNota(Double.valueOf(notaDisciplina));
 			
@@ -49,7 +50,7 @@ public class ControleAprovação {
 			
 		}
 		
-		
+		  
 		   System.out.println(aluno.toString());
 		   System.out.printf( "a sua media %.2f: \n", aluno.getMediaNota());
 		   System.out.println(disciplina.toString());
