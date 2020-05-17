@@ -43,13 +43,21 @@ public class ControleAprovação {
 			disciplina.setNota(Double.valueOf(notaDisciplina));
 
 			aluno.getDisciplinas().add(disciplina);
+			
 
 		}
 
 		System.out.println(aluno.toString());
 		System.out.printf("a sua media %.2f: \n", aluno.getMediaNota());
-		System.out
-				.println(" O aluno " + aluno.getNome() + " está" + (aluno.getAprovacao() ? " Aprovado" : " Reprovado"));
+		
+		System.out.println(" O aluno " + aluno.getNome() + " está" + (aluno.getAprovacao() ? " Aprovado" : " Reprovado"));
+		
+		int escolha = JOptionPane.showConfirmDialog(null," Deseja remover alguma disciplina?");
+		
+		if(escolha == 0) {
+			String disciplinaRemover = JOptionPane.showInputDialog("Qual será removida? \n a 1, 2, 3 ou 4 ?");
+			aluno.getDisciplinas().remove(Integer.valueOf(disciplinaRemover).intValue()-1 );
+		}
 
 		sc.close();
 	}

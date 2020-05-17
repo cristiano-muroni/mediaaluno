@@ -111,7 +111,8 @@ public class Aluno {
 	public String toString() {
 		return " O Aluno: " + "nome: " + getNome() + " ra: " + getRa() + "\n nomePai: " + getNomePai() + " e nomeMae: "
 				+ getNomeMae() + "\n semestre:" + getSemestre() + "\n dataNascimento:" + getDataNascimento()
-				+ ", numeroCpf:" + getNumeroCpf() + "\n" + " Escola: " + getNomeEscola() + "\n" + getDisciplinas();
+				+ ", numeroCpf:" + getNumeroCpf() + "\n" + " Escola: " + getNomeEscola() + "\n"  ;
 	}
+	
 
 }
