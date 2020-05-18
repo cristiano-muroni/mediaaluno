@@ -98,6 +98,9 @@ public class Aluno {
 		}
 		return somaNotas / disciplinas.size();
 	}
+	
+		
+	
 
 	public boolean getAprovacao() {
 		double media = this.getMediaNota();
@@ -106,12 +109,15 @@ public class Aluno {
 		}
 		return false;
 	}
+	
+	
+	
 
 	@Override
 	public String toString() {
 		return " O Aluno: " + "nome: " + getNome() + " ra: " + getRa() + "\n nomePai: " + getNomePai() + " e nomeMae: "
 				+ getNomeMae() + "\n semestre:" + getSemestre() + "\n dataNascimento:" + getDataNascimento()
-				+ ", numeroCpf:" + getNumeroCpf() + "\n" + " Escola: " + getNomeEscola() + "\n"  ;
+				+ ", numeroCpf:" + getNumeroCpf() + "\n" + " Escola: " + getNomeEscola() + "\n";
 	}
 	
 
