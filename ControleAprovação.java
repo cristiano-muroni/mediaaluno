@@ -52,7 +52,7 @@ public class ControleAprovação {
 
 		System.out.println(aluno.toString());
 		System.out.printf("a sua media %.2f: \n", aluno.getMediaNota());
-		System.out.println(" O aluno " + aluno.getNome() + " está" + (aluno.getAprovacao() ? " Aprovado" : " Reprovado"));
+		System.out.println(" O aluno " + aluno.getNome() + " está" + aluno.getAprovacao());
 
 		int escolha = JOptionPane.showConfirmDialog(null, " Deseja remover alguma disciplina?");
 
