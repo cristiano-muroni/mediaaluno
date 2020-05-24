@@ -18,9 +18,9 @@ public class ControleAprovação {
 		List<Aluno> alunos = new ArrayList<Aluno>();
 		Aluno aluno = null;
 
-		for (int qtd = 1; qtd < 3; qtd++) {// inico do escopo para add varios alunos
+		for (int qtd = 1; qtd < 4; qtd++) {// inico do escopo para add varios alunos
 
-			 aluno = new Aluno();
+			aluno = new Aluno();
 
 			// capturando os dados do usuário
 			System.out.println(" Digite o Ra do aluno");
@@ -29,20 +29,20 @@ public class ControleAprovação {
 			aluno.setNome(sc.nextLine());
 			System.out.println(" Digite o nome do pai do aluno");
 			aluno.setNomePai(sc.nextLine());
-			// System.out.println(" Digite o nome do mãe do aluno");
-			// aluno.setNomeMae(sc.nextLine());
-			// System.out.println(" Digite o CPF aluno");
-			// aluno.setNumeroCpf(Long.parseLong(sc.nextLine()));
-			// System.out.println(" Digite a data de nascimento");
-			// aluno.setDataNascimento(sc.nextLine());
-			// System.out.println(" Digite o nome da Escola");
-			// aluno.setNomeEscola(sc.nextLine());
-			// String semestre = JOptionPane.showInputDialog(" digite o semestre do aluno");
-			// aluno.setSemestre(semestre);
+			System.out.println(" Digite o nome do mãe do aluno");
+			aluno.setNomeMae(sc.nextLine());
+			System.out.println(" Digite o CPF aluno");
+			aluno.setNumeroCpf(Long.parseLong(sc.nextLine()));
+			System.out.println(" Digite a data de nascimento");
+			aluno.setDataNascimento(sc.nextLine());
+			System.out.println(" Digite o nome da Escola");
+			aluno.setNomeEscola(sc.nextLine());
+			String semestre = JOptionPane.showInputDialog(" digite o semestre do aluno");
+			aluno.setSemestre(semestre);
 
 			Disciplina disciplina = null;
 
-			for (int i = 1; i < 3; i++) {// escopo que scaneia para dentro do List, os dados vindo do usuário
+			for (int i = 1; i < 4; i++) {// escopo que scaneia para dentro do List, os dados vindo do usuário
 
 				String nomeDisciplina = JOptionPane.showInputDialog(" Digite o nome da disciplina" + i + " ?");
 				String notaDisciplina = JOptionPane.showInputDialog(" Digite a nota da disciplina" + i + " ?");
@@ -60,7 +60,7 @@ public class ControleAprovação {
 
 		for (Aluno alunoX : alunos) {
 			System.out.println(alunoX.toString());
-			System.out.printf("a sua media %.2f: \n", alunoX.getMediaNota());
+			System.out.printf("a sua media é %.2f: \n", alunoX.getMediaNota());
 			System.out.println(" O aluno " + alunoX.getNome() + " está" + alunoX.getAprovacao());
 			System.out.println("-------------------------- * -------------------------------");
 

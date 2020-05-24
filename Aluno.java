@@ -106,13 +106,13 @@ public class Aluno {
 		double media = this.getMediaNota();
 		if (media >= 5) {
 			if (media >= 7) {
-				return "Aluno Aprovado";
+				return " Aprovado";
 			}else {
-				return "Aluno em recuperação";
+				return " em recuperação";
 			}
 			
 		}else {
-			return " Aluno Reprovado";
+			return "  Reprovado";
 		}
 		
 	}
