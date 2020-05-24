@@ -16,9 +16,11 @@ public class ControleAprovação {
 		Scanner sc = new Scanner(System.in);
 
 		List<Aluno> alunos = new ArrayList<Aluno>();
-		Aluno aluno = new Aluno();
+		Aluno aluno = null;
 
 		for (int qtd = 1; qtd < 3; qtd++) {// inico do escopo para add varios alunos
+
+			 aluno = new Aluno();
 
 			// capturando os dados do usuário
 			System.out.println(" Digite o Ra do aluno");
@@ -61,11 +63,6 @@ public class ControleAprovação {
 			System.out.printf("a sua media %.2f: \n", alunoX.getMediaNota());
 			System.out.println(" O aluno " + alunoX.getNome() + " está" + alunoX.getAprovacao());
 			System.out.println("-------------------------- * -------------------------------");
-			for (Disciplina conteudo : aluno.getDisciplinas()) {// escopo que faz mostra na tela a lista de disciplinas
-																// e
-				// suas notas
-				System.out.println(conteudo.toString());
-			}
 
 		}
 
