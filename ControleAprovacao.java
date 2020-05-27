@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 import javax.swing.JOptionPane;
 
-public class ControleAprovação {
+public class ControleAprovacao {
 
 	public static void main(String[] args) {
 
@@ -60,15 +60,15 @@ public class ControleAprovação {
 
 		for (Aluno alunoX : alunos) {
 			System.out.println(alunoX.toString());
+
+			for (Disciplina conteudo : alunoX.getDisciplinas()) {// escopo que faz mostra na tela a lista de disciplinas
+																	// e
+																	// suas notas
+				System.out.println(conteudo.toString());
+			}
 			System.out.printf("a sua media é %.2f: \n", alunoX.getMediaNota());
 			System.out.println(" O aluno " + alunoX.getNome() + " está" + alunoX.getAprovacao());
 			System.out.println("-------------------------- * -------------------------------");
-
-		}
-
-		for (Disciplina conteudo : aluno.getDisciplinas()) {// escopo que faz mostra na tela a lista de disciplinas e
-															// suas notas
-			System.out.println(conteudo.toString());
 		}
 
 		int escolha = JOptionPane.showConfirmDialog(null, " Deseja remover alguma disciplina?");
