@@ -102,6 +102,9 @@ public class Aluno {
 		
 	
 
+	/**
+	 * @return
+	 */
 	public String getAprovacao() {
 		double media = this.getMediaNota();
 		if (media >= 5) {

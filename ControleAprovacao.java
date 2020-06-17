@@ -11,32 +11,31 @@ import javax.swing.JOptionPane;
 public class ControleAprovacao {
 
 	public static void main(String[] args) {
-
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 
 		List<Aluno> alunos = new ArrayList<Aluno>();
 		Aluno aluno = null;
 
-		for (int qtd = 1; qtd < 4; qtd++) {// inico do escopo para add varios alunos
+		for (int qtd = 1; qtd < 2; qtd++) {// inico do escopo para add varios alunos
 
 			aluno = new Aluno();
 
 			// capturando os dados do usuário
-			System.out.println(" Digite o Ra do aluno");
-			aluno.setRa(Integer.parseInt(sc.nextLine()));
-			System.out.println(" Digite o nome do aluno " + qtd);
-			aluno.setNome(sc.nextLine());
-			System.out.println(" Digite o nome do pai do aluno");
-			aluno.setNomePai(sc.nextLine());
-			System.out.println(" Digite o nome do mãe do aluno");
-			aluno.setNomeMae(sc.nextLine());
-			System.out.println(" Digite o CPF aluno");
-			aluno.setNumeroCpf(Long.parseLong(sc.nextLine()));
-			System.out.println(" Digite a data de nascimento");
-			aluno.setDataNascimento(sc.nextLine());
-			System.out.println(" Digite o nome da Escola");
-			aluno.setNomeEscola(sc.nextLine());
+			String ra = JOptionPane.showInputDialog(" digite o R.a do aluno");
+			aluno.setRa(Integer.parseInt(ra));
+			String nome = JOptionPane.showInputDialog("digite o nome do aluno " + qtd + "!");
+			aluno.setNome(nome);
+			String pai = JOptionPane.showInputDialog(" digite o nome do pai do aluno");
+			aluno.setNomePai(pai);
+			String mae = JOptionPane.showInputDialog("digite o nome da mãe do aluno");
+			aluno.setNomeMae(mae);
+			String cpf = JOptionPane.showInputDialog("digite o cpf do aluno");
+			aluno.setNumeroCpf(Long.parseLong(cpf));
+			String data = JOptionPane.showInputDialog("digite a data de nascimento do aluno");
+			aluno.setDataNascimento(data);
+			String escola = JOptionPane.showInputDialog("digite o nome da escola");
+			aluno.setNomeEscola(escola);
 			String semestre = JOptionPane.showInputDialog(" digite o semestre do aluno");
 			aluno.setSemestre(semestre);
 
@@ -59,7 +58,6 @@ public class ControleAprovacao {
 		} // fim do escopo para add varios alunos
 
 		for (Aluno alunoX : alunos) {
-			System.out.println(alunoX.toString());
 
 			for (Disciplina conteudo : alunoX.getDisciplinas()) {// escopo que faz mostra na tela a lista de disciplinas
 																	// e
